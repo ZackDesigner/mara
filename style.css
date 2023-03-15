@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+    	background-color: ;
+    	box-sizing: border-box;
+}
+
+.sometext {
+	font-family: Tahoma;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+    	color: purple;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 50vh;     
+}
+
+@media (max-width: 780px) {
+    .sometext {
+	font-size: 1.2rem;
+	color: rgb(150, 20, 200);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 50vh; 
+    }
+}
+.mydiv {
+	position: relative;
+	margin: 10% auto 0;
+	width: 70%;
+	height: 200px;
+    	background: linear-gradient(90deg, #000000, #000000); 
+}
+
+h1:before {
+	content: '';
+	animation: changingTxt 30s linear infinite;
+}
+
+@keyframes changingTxt {
+	0% {
+		content: 'La vita finisce ';
+	}
+	5% {
+		content: 'per mettere';
+	}
+	10% {
+		content: 'persone';
+	}
+	15% {
+		content: 'meravigliose';
+	}
+	20% {
+		content: 'sulla strada,';
+	}
+	25% {
+		content: 'la mia persona';
+	}
+	30% {
+		content: 'meravigliosa';
+	}
+	35% {
+		content: 'sei tu.';
+	}
+	40% {
+		content: 'Grazie per';
+	}
+	45% {
+		content: 'avermi reso';
+	}
+	50% {
+		content: 'così felice';
+	}
+	55% {
+		content: 'Albert, amore';
+	}
+	60% {
+		content: 'mio♥.';
+		}
+}
+
+.animate-bg:before, .animate-bg:after {
+	content: '';
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	background: linear-gradient(120deg, #cb6bff, #8d01a0, #a43dd4,#8c3a9e,  
+	#721675, #c557de,#9919d1, #e1b8ff,#820371, #ba6edb);
+	background-size: 300%;
+	width: calc(100% + 16px);
+	height: calc(100% + 16px);
+	z-index: -1;
+	animation: BGgradient 5s ease infinite; 
+}
+
+@keyframes BGgradient {
+	0% {
+		background-position: 0% 200%;
+	}
+	50% {
+		background-position: 200% 0%;
+	}
+	100% {
+		background-position: 0% 330%;
+	}
+}
+
+.animate-bg:after {
+	filter: brightness(1.4);
+	filter: drop-shadow(16px 16px 20px rgb(248, 220, 97));
+	filter: blur(15px);
+}
